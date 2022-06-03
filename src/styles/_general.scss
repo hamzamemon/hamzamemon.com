@@ -1,0 +1,125 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-family: 'ActionMan';
+  letter-spacing: 0.3px;
+  width: 100%;
+  line-height: 1.1;
+}
+
+section {
+  @extend .panel-border;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 0.5rem + 5vw, 4rem);
+}
+
+p,
+div,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline-color: #e8b63e;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-slide {
+  width: 100vw;
+  height: 90vh;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.panel-border {
+  border: 2px solid black;
+}
+
+.gatsby-image-wrapper {
+  position: unset;
+}
+
+.book-page-panels {
+  width: 100%;
+  max-width: 1250px;
+  border: 0;
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  .panel {
+    background-color: #fff;
+    box-shadow: 0 6px 6px -6px #000;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    min-height: 200px;
+
+    span {
+      border: 2px solid black;
+      position: absolute;
+      background-color: white;
+      padding: 0.75rem;
+      opacity: 0.8;
+      line-height: 1;
+      font-size: 0.9rem;
+      font-weight: 800;
+
+      @media (min-width: 375px) {
+        font-size: 1rem;
+      }
+
+      @media (min-width: 414px) {
+        font-size: 1.1rem;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 1.2rem;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 1.4rem;
+      }
+
+      &.employer,
+      &.title {
+        top: 1%;
+        right: 1%;
+        background-color: yellow;
+      }
+
+      &.languages {
+        bottom: 1%;
+        left: 1%;
+        background-color: yellow;
+      }
+    }
+  }
+}
