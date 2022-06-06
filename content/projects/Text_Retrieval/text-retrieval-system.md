@@ -1,7 +1,7 @@
 ---
 id: 2
 title: Text Retrieval System
-src: ../../src/images/projects/text-retrieval.jpg
+src: ./text-retrieval.jpg
 alt: Text Retrieval System
 text:
   - Able to index 20,000 files in 15 seconds utilizing Serializable objects

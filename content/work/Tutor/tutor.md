@@ -1,6 +1,6 @@
 ---
 id: 4
-src: ../../src/images/work/tutor.jpg
+src: ./tutor.jpg
 alt: Computer Science Tutor
 text:
   - Led drop-in group tutoring for introductory computer science courses to strengthen programming skills

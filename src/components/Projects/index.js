@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import styled from 'styled-components';
-import { devices } from '../breakpoints';
 
 const Projects = React.forwardRef((props, ref) => {
   const query = useStaticQuery(graphql`
@@ -43,7 +42,7 @@ const Projects = React.forwardRef((props, ref) => {
         {query.work.edges.map(({ node }, i) => {
           return (
             <div key={i} className="panel-border panel">
-              <a href={node.frontmatter.url} target="_blank">
+              <a href={node.frontmatter.url}>
                 <figure>
                   <GatsbyImage
                     image={getImage(node.frontmatter.src)}
@@ -88,7 +87,7 @@ const Wrapper = styled.section`
   grid-area: Projects;
 
   .panel:nth-child(1) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 1 / 1 / 1 / 13;
     }
 
@@ -106,7 +105,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(2) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 2 / 1 / 2 / 13;
     }
 
@@ -115,7 +114,7 @@ const Wrapper = styled.section`
       left: 4%;
       width: 45%;
 
-      @media ${devices.laptop} {
+      @media (${({ theme }) => theme.breakpoints.laptop}) {
         top: 5%;
         left: 5%;
         width: 55%;
@@ -136,7 +135,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(3) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 3 / 1 / 3 / 13;
     }
 
@@ -148,7 +147,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(4) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 4 / 1 / 4 / 13;
     }
 

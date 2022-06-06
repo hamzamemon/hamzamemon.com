@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import styled from 'styled-components';
-import { devices } from '../breakpoints';
 
 const Work = () => {
   const query = useStaticQuery(graphql`
@@ -46,6 +45,7 @@ const Work = () => {
                 <GatsbyImage
                   image={getImage(node.frontmatter.src)}
                   alt={node.frontmatter.alt}
+                  className="position-unset"
                 />
               </figure>
               {node.frontmatter.employer && (
@@ -78,24 +78,30 @@ const Work = () => {
 const Wrapper = styled.section`
   grid-area: Work;
 
+  .position-unset {
+    position: unset;
+  }
+
   .panel:nth-child(1) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 1 / 1 / 1 / 7;
     }
 
     div span:nth-child(1) {
-      top: 5%;
-      left: 5%;
+      top: 17%;
+      right: 5%;
+      width: 80%;
     }
 
     div span:nth-child(2) {
       top: 50%;
-      left: 50%;
+      left: 5%;
+      width: 65%;
     }
   }
 
   .panel:nth-child(2) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 1 / 7 / 1 / 13;
     }
 
@@ -104,7 +110,7 @@ const Wrapper = styled.section`
       left: 5%;
       width: 40%;
 
-      @media ${devices.laptop} {
+      @media (${({ theme }) => theme.breakpoints.laptop}) {
         top: 5%;
         left: 5%;
         width: 50%;
@@ -119,7 +125,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(3) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 2 / 1 / 2 / 6;
     }
 
@@ -131,7 +137,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(4) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 2 / 6 / 2 / 13;
     }
 
@@ -143,7 +149,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(5) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 3 / 1 / 3 / 7;
     }
 
@@ -161,7 +167,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(6) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 3 / 7 / 3 / 13;
     }
 
@@ -173,7 +179,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(7) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 4 / 1 / 4 / 8;
     }
 
@@ -191,7 +197,7 @@ const Wrapper = styled.section`
   }
 
   .panel:nth-child(8) {
-    @media ${devices.tablet} {
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
       grid-area: 4 / 8 / 4 / 13;
     }
 

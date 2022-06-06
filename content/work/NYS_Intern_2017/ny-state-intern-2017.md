@@ -1,6 +1,6 @@
 ---
 id: 7
-src: ../../src/images/work/ny-state-intern-2017.jpg
+src: ./ny-state-intern-2017.jpg
 alt: New York State Senate Software Development Intern 2017
 text:
   - Converted a travel request procedure from paper to online, impacting over 1,500 employees

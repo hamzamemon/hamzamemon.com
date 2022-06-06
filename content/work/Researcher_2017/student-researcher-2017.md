@@ -1,6 +1,6 @@
 ---
 id: 5
-src: ../../src/images/work/student-researcher-2017.jpg
+src: ./student-researcher-2017.jpg
 alt: Student Researcher Summer 2017
 text:
   - Implemented a deduplication algorithm which reduced the number of unique individuals in a data set provided by HUD by 30%

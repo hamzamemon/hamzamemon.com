@@ -1,11 +1,7 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-import Work from '../components/Work';
-import Projects from '../components/Projects';
-import FrontCover from '../components/FrontCover';
+import { Layout, FrontCover, Work, Projects, BackCover } from '@components';
 import Slider from 'react-slick';
-import BackCover from '../components/BackCover';
 
 const IndexPage = () => {
   const settings = {
@@ -17,12 +13,14 @@ const IndexPage = () => {
   };
   return (
     <Layout>
-      <Slider {...settings}>
-        <FrontCover />
-        <Work />
-        <Projects />
-        <BackCover />
-      </Slider>
+      <main>
+        <Slider {...settings}>
+          <FrontCover />
+          <Work />
+          <Projects />
+          <BackCover />
+        </Slider>
+      </main>
     </Layout>
   );
 };

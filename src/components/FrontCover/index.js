@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-import { devices } from '../breakpoints';
 
 import Barcode from '../../images/frontcover-barcode.svg';
 
@@ -13,6 +12,7 @@ const FrontCover = () => {
         alt="Work"
         layout="fixed"
         placeholder="blurred"
+        className="position-unset"
       />
       <CoverHeader>
         <div className="logo-div">
@@ -46,9 +46,13 @@ const FrontCover = () => {
 const Wrapper = styled.section`
   width: 100%;
   height: 100%;
-  max-height: 90vh;
+  ${({ theme }) => theme.mixins.viewportHeight};
   position: relative;
   overflow: hidden;
+
+  .position-unset {
+    position: unset;
+  }
 `;
 
 const CoverHeader = styled.div`
@@ -70,22 +74,22 @@ const CoverHeader = styled.div`
       width: 30px;
       height: 30px;
 
-      @media ${devices.mobileM} {
+      @media (${({ theme }) => theme.breakpoints.mobileM}) {
         width: 40px;
         height: 40px;
       }
 
-      @media ${devices.mobileL} {
+      @media (${({ theme }) => theme.breakpoints.mobileL}) {
         width: 50px;
         height: 50px;
       }
 
-      @media ${devices.tabletS} {
+      @media (${({ theme }) => theme.breakpoints.tabletS}) {
         width: 60px;
         height: 60px;
       }
 
-      @media ${devices.laptop} {
+      @media (${({ theme }) => theme.breakpoints.laptop}) {
         width: 80px;
         height: 80px;
       }
@@ -98,16 +102,16 @@ const CoverHeader = styled.div`
     grid-area: Name;
     line-height: 0.8;
     color: #ffa0c5;
+    text-shadow: 0.1rem 0.1rem black;
   }
 `;
 
 const BarcodePrice = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter};
   position: absolute;
   bottom: 2%;
   left: 2%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: white;
   padding: 0.3rem;
 

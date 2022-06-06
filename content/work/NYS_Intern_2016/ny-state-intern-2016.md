@@ -1,6 +1,6 @@
 ---
 id: 8
-src: ../../src/images/work/ny-state-intern-2016.jpg
+src: ./ny-state-intern-2016.jpg
 alt: New York State Senate Software Development Intern 2016
 text:
   - Remodeled areas of the Open Legislation website

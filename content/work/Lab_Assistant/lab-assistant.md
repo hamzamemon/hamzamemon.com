@@ -1,6 +1,6 @@
 ---
 id: 3
-src: ../../src/images/work/lab-assistant.jpg
+src: ./lab-assistant.jpg
 alt: Computer Science Classroom/Lab Assistant
 text:
   - Assisted students taking introductory computer science courses with proper completion of lab/lecture materials

@@ -20,7 +20,7 @@ const BackCover = () => {
         <div className="content-text">
           <h1>Software Developer.</h1>
           <h2>
-            An experienced software developer who loves to challenge myself.
+            An experienced software developer who loves to challenge himself.
           </h2>
           <h4>
             I am a quick learner and will efficiently spend time learning a new
@@ -64,7 +64,7 @@ const BackCover = () => {
 const Wrapper = styled.section`
   width: 100%;
   height: 100%;
-  max-height: 90vh;
+  ${({ theme }) => theme.mixins.viewportHeight};
   position: relative;
   overflow: hidden;
   color: black;
@@ -82,6 +82,7 @@ const Wrapper = styled.section`
 
     a {
       color: #ffa0c5;
+      text-shadow: 0.1rem 0.1rem black;
     }
   }
 `;
@@ -101,20 +102,19 @@ const ContentGrid = styled.div`
   height: 100%;
 
   .content-text {
+    ${({ theme }) => theme.mixins.flexAround};
     grid-area: Content;
-    display: inline-flex;
     flex-direction: column;
     position: absolute;
     top: 0;
-    align-items: center;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
     text-align: center;
     padding: 2rem 2rem 0;
 
     h1 {
       color: #ffa0c5;
+      text-shadow: 0.1rem 0.1rem black;
     }
 
     ul {
@@ -144,10 +144,9 @@ const ContentGrid = styled.div`
   }
 
   .image-links-div {
+    ${({ theme }) => theme.mixins.flexCenter};
     grid-area: Image;
-    display: flex;
     flex-direction: row;
-    justify-content: center;
     width: 50%;
     margin: 0 auto;
     padding: 0 2rem 4rem;

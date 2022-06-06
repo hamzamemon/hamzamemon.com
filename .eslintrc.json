@@ -21,6 +21,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "arrow-body-style": ["error", "always"]
+    "arrow-body-style": ["error", "always"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
   }
 }
