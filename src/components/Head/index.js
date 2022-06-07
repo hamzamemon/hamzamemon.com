@@ -9,23 +9,22 @@ const Head = ({ title, description, image }) => {
       query {
         site {
           siteMetadata {
-            defaultTitle: title
-            defaultDescription: description
+            siteTitle: title
+            siteDescription: description
             siteUrl
-            defaultImage: image
+            siteImage: image
           }
         }
       }
     `
   );
 
-  const { defaultTitle, defaultDescription, siteUrl, defaultImage } =
-    site.siteMetadata;
+  const { siteTitle, siteDescription, siteUrl, siteImage } = site.siteMetadata;
 
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    title: title || siteTitle,
+    description: description || siteDescription,
+    image: `${siteUrl}${image || siteImage}`,
     url: `${siteUrl}`,
   };
 
@@ -33,7 +32,7 @@ const Head = ({ title, description, image }) => {
     <Helmet
       title={title}
       defaultTitle={seo.title}
-      titleTemplate={`%s | ${defaultTitle}`}
+      titleTemplate={`%s | ${siteTitle}`}
     >
       <html lang="en" />
 
@@ -47,6 +46,18 @@ const Head = ({ title, description, image }) => {
       <meta property="og:type" content="website" />
     </Helmet>
   );
+};
+
+Head.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+};
+
+Head.defaultProps = {
+  title: null,
+  description: null,
+  image: null,
 };
 
 export default Head;

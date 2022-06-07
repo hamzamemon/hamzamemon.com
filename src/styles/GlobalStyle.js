@@ -111,11 +111,11 @@ const GlobalStyle = createGlobalStyle`
         }
   
         @media (min-width: 1024px) {
-          font-size: 1.2rem;
+          font-size: 1.15rem;
         }
   
         @media (min-width: 1440px) {
-          font-size: 1.4rem;
+          font-size: 1.25rem;
         }
   
         &.employer,

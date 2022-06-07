@@ -97,7 +97,7 @@ const CoverHeader = styled.div`
   }
 
   .name-div {
-    font-size: clamp(4rem, 0.5rem + 15vw, 10rem);
+    font-size: clamp(4rem, 0.5rem + 11vw, 10rem);
     text-align: center;
     grid-area: Name;
     line-height: 0.8;
