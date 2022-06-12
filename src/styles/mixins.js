@@ -14,12 +14,16 @@ const mixins = {
   `,
 
   panelBorder: css`
-    border: 2px solid black;
+    border: 2px solid var(--black);
   `,
 
-  viewportHeight: css`
+  pageViewportHeight: css`
     height: 93vh;
     max-height: 93vh;
+  `,
+
+  textShadow: css`
+    text-shadow: 0.2rem 0.2rem var(--black);
   `,
 };
 

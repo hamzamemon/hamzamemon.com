@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
+import variables from './variables';
 import './typography.scss';
 
 const GlobalStyle = createGlobalStyle`
+  ${variables};
+
   html {
     box-sizing: border-box;
     width: 100%;
@@ -21,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     overflow-x: hidden;
     font-weight: 400;
-    font-family: 'ActionMan';
+    font-family: var(--font);
     letter-spacing: 0.3px;
     width: 100%;
     line-height: 1.1;
@@ -36,13 +39,8 @@ const GlobalStyle = createGlobalStyle`
     ${({ theme }) => theme.mixins.panelBorder};
   }
   
-  h1,
-  h2 {
-    font-weight: 800;
-  }
-  
   h1 {
-    font-size: clamp(1.5rem, 0.5rem + 5vw, 4rem);
+    font-weight: 800;
   }
   
   p,
@@ -54,12 +52,12 @@ const GlobalStyle = createGlobalStyle`
   
   .slick-prev:before,
   .slick-next:before {
-    color: black;
+    color: var(--black);
   }
   
   .slick-slide {
     width: 100vw;
-    ${({ theme }) => theme.mixins.viewportHeight};
+    ${({ theme }) => theme.mixins.pageViewportHeight};
     overflow: auto;
   }
   
@@ -85,8 +83,8 @@ const GlobalStyle = createGlobalStyle`
   
     .panel {
       ${({ theme }) => theme.mixins.panelBorder};
-      background-color: #fff;
-      box-shadow: 0 6px 6px -6px #000;
+      background-color: var(--white);
+      box-shadow: 0 6px 6px -6px var(--black);
       display: inline-block;
       overflow: hidden;
       position: relative;
@@ -95,7 +93,7 @@ const GlobalStyle = createGlobalStyle`
       span {
         ${({ theme }) => theme.mixins.panelBorder};
         position: absolute;
-        background-color: white;
+        background-color: var(--white);
         padding: 0.75rem;
         opacity: 0.8;
         line-height: 1;
@@ -122,13 +120,13 @@ const GlobalStyle = createGlobalStyle`
         &.title {
           top: 1%;
           right: 1%;
-          background-color: yellow;
+          background-color: var(--yellow);
         }
   
         &.languages {
           bottom: 1%;
           left: 1%;
-          background-color: yellow;
+          background-color: var(--yellow);
         }
       }
     }

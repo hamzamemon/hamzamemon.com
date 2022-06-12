@@ -1,20 +1,38 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Barcode from '../../images/frontcover-barcode.svg';
 
 const FrontCover = () => {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          linkedin
+        }
+      }
+    }
+  `);
+
+  const { linkedin } = site.siteMetadata;
+
   return (
     <Wrapper>
       <StaticImage
         src="../../images/frontcover.jpg"
-        alt="Work"
+        alt="Hamza Memon front cover"
         layout="fixed"
         placeholder="blurred"
         className="position-unset"
       />
-      <CoverHeader>
+
+      <div className="name-div">
+        <span>Hamza Memon</span>
+      </div>
+
+      <BarcodePrice>
         <div className="logo-div">
           <StaticImage
             src="../../images/logo.png"
@@ -25,18 +43,12 @@ const FrontCover = () => {
           />
         </div>
 
-        <div className="name-div">
-          <span>Hamza Memon</span>
-        </div>
-      </CoverHeader>
-
-      <BarcodePrice>
-        <div className="h5">
-          <p>$0.00</p>
-        </div>
+        <p>$0.00</p>
 
         <div className="barcode">
-          <Barcode />
+          <a href={linkedin}>
+            <Barcode />
+          </a>
         </div>
       </BarcodePrice>
     </Wrapper>
@@ -46,63 +58,23 @@ const FrontCover = () => {
 const Wrapper = styled.section`
   width: 100%;
   height: 100%;
-  ${({ theme }) => theme.mixins.viewportHeight};
+  ${({ theme }) => theme.mixins.pageViewportHeight};
   position: relative;
   overflow: hidden;
 
   .position-unset {
     position: unset;
   }
-`;
-
-const CoverHeader = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  grid-gap: 0px;
-  position: absolute;
-  grid-template-areas: 'Logo Name Name Name Name Name Name Name Name Name Name .';
-
-  top: 2%;
-  left: 4%;
-
-  .logo-div {
-    grid-area: Logo;
-
-    .logo {
-      width: 30px;
-      height: 30px;
-
-      @media (${({ theme }) => theme.breakpoints.mobileM}) {
-        width: 40px;
-        height: 40px;
-      }
-
-      @media (${({ theme }) => theme.breakpoints.mobileL}) {
-        width: 50px;
-        height: 50px;
-      }
-
-      @media (${({ theme }) => theme.breakpoints.tabletS}) {
-        width: 60px;
-        height: 60px;
-      }
-
-      @media (${({ theme }) => theme.breakpoints.laptop}) {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  }
 
   .name-div {
+    ${({ theme }) => theme.mixins.textShadow};
+    width: 100%;
+    position: absolute;
+    top: 2%;
     font-size: clamp(4rem, 0.5rem + 11vw, 10rem);
     text-align: center;
-    grid-area: Name;
     line-height: 0.8;
-    color: #ffa0c5;
-    text-shadow: 0.1rem 0.1rem black;
+    color: var(--pink);
   }
 `;
 
@@ -112,13 +84,29 @@ const BarcodePrice = styled.div`
   bottom: 2%;
   left: 2%;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--white);
   padding: 0.3rem;
+
+  .logo-div {
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .logo {
+      padding: 1rem;
+    }
+  }
+
+  p {
+    font-size: clamp(1rem, 5vw, 3rem);
+    padding: 0.25rem 0;
+  }
 
   .barcode {
     svg {
-      width: clamp(5rem, 6vw, 10rem);
-      height: clamp(5rem, 6vw, 10rem);
+      width: clamp(6rem, 6vw, 10rem);
+      height: clamp(6rem, 6vw, 10rem);
     }
   }
 `;

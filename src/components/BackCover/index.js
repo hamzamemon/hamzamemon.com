@@ -8,7 +8,7 @@ const BackCover = () => {
     <Wrapper>
       <StaticImage
         src="../../images/backcover.jpg"
-        alt=""
+        alt="Hamza Memon back cover"
         layout="fixed"
         placeholder="blurred"
         style={{
@@ -35,11 +35,11 @@ const BackCover = () => {
             <h4>A few technologies I have used recently:</h4>
 
             <ul>
-              <li className="h5">TypeScript</li>
-              <li className="h5">Angular</li>
-              <li className="h5">Java/Spring</li>
-              <li className="h5">React</li>
-              <li className="h5">Docker/Kubernetes</li>
+              <li>TypeScript</li>
+              <li>Angular</li>
+              <li>Java/Spring</li>
+              <li>React</li>
+              <li>Docker/Kubernetes</li>
             </ul>
           </div>
         </div>
@@ -51,12 +51,12 @@ const BackCover = () => {
             width={200}
           />
         </div>
-      </ContentGrid>
 
-      <span className="logo-credit">
-        *Created my logo at&nbsp;
-        <a href="https://logomakr.com/">LogoMakr.com</a>
-      </span>
+        <span className="logo-credit">
+          *Created my logo at&nbsp;
+          <a href="https://logomakr.com/">LogoMakr.com</a>
+        </span>
+      </ContentGrid>
     </Wrapper>
   );
 };
@@ -64,37 +64,25 @@ const BackCover = () => {
 const Wrapper = styled.section`
   width: 100%;
   height: 100%;
-  ${({ theme }) => theme.mixins.viewportHeight};
+  ${({ theme }) => theme.mixins.pageViewportHeight};
   position: relative;
   overflow: hidden;
-  color: black;
+  color: var(--black);
 
   .gatsby-image-wrapper {
     position: relative;
-  }
-
-  .logo-credit {
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
-    color: black;
-    font-weight: 800;
-
-    a {
-      color: #ffa0c5;
-      text-shadow: 0.1rem 0.1rem black;
-    }
   }
 `;
 
 const ContentGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 9fr 3fr;
+  grid-template-rows: 9fr 2fr 0.3fr;
   grid-gap: 0;
   grid-template-areas:
     'Content'
-    'Image';
+    'Image'
+    'Credit';
   position: absolute;
   top: 0;
   left: 0;
@@ -105,16 +93,23 @@ const ContentGrid = styled.div`
     ${({ theme }) => theme.mixins.flexAround};
     grid-area: Content;
     flex-direction: column;
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 2rem 2rem 0;
+    padding: 1rem 2rem 0;
 
     h1 {
-      color: #ffa0c5;
-      text-shadow: 0.1rem 0.1rem black;
+      ${({ theme }) => theme.mixins.textShadow};
+      color: var(--pink);
+      font-size: clamp(1.5rem, 7vw, 4rem);
+    }
+
+    h2 {
+      font-size: clamp(1.25rem, 0.25rem + 4vw, 2rem);
+    }
+
+    h4 {
+      font-size: clamp(1.1rem, 0.5rem + 1vw, 1.5rem);
     }
 
     ul {
@@ -132,6 +127,7 @@ const ContentGrid = styled.div`
         margin-bottom: 0.5rem;
         padding-left: 1.5rem;
         text-align: left;
+        font-size: clamp(1rem, 0.5rem + 1vw, 1.1rem);
 
         &:before {
           content: '▹';
@@ -151,6 +147,19 @@ const ContentGrid = styled.div`
     margin: 0 auto;
     padding: 0 2rem 4rem;
     max-width: 700px;
+  }
+
+  .logo-credit {
+    grid-area: Credit;
+    color: var(--black);
+    font-weight: 800;
+    text-align: right;
+    padding: 0 0.5rem 0.5rem 0;
+
+    a {
+      color: var(--pink);
+      text-shadow: 0.1rem 0.1rem var(--black);
+    }
   }
 `;
 

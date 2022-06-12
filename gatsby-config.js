@@ -3,7 +3,8 @@ module.exports = {
     title: `Hamza Memon`,
     description: `Hamza Memon is an experienced software developer who loves to challenge himself.`,
     siteUrl: `https://hamzamemon.com`,
-    image: `/about-me.png`,
+    image: `/demo.png`,
+    linkedin: `https://www.linkedin.com/in/hamza-memon/`,
   },
   plugins: [
     `gatsby-plugin-image`,
