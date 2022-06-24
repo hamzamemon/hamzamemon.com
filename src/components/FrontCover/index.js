@@ -94,12 +94,12 @@ const BarcodePrice = styled.div`
     position: relative;
 
     .logo {
-      padding: 1rem;
+      padding: 1.4rem;
     }
   }
 
   p {
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     padding: 0.25rem 0;
   }
 

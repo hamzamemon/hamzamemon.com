@@ -1,21 +1,34 @@
 import { createGlobalStyle } from 'styled-components';
 import variables from './variables';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './typography.scss';
 
 const GlobalStyle = createGlobalStyle`
   ${variables};
 
-  html {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
-    width: 100%;
-    scroll-behavior: smooth;
-    font-size: 62.5%;
   }
 
-  *,
-  *:before,
-  *:after {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
   }
 
   body {
@@ -26,8 +39,27 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-family: var(--font);
     letter-spacing: 0.3px;
-    width: 100%;
     line-height: 1.1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
   }
 
   a {
@@ -41,13 +73,6 @@ const GlobalStyle = createGlobalStyle`
   
   h1 {
     font-weight: 800;
-  }
-  
-  p,
-  div,
-  figure {
-    margin: 0;
-    padding: 0;
   }
   
   .slick-prev:before,

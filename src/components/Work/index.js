@@ -41,13 +41,11 @@ const Work = () => {
         {query.work.edges.map(({ node }, i) => {
           return (
             <div key={i} className="panel-border panel">
-              <figure>
-                <GatsbyImage
-                  image={getImage(node.frontmatter.src)}
-                  alt={node.frontmatter.alt}
-                  className="position-unset"
-                />
-              </figure>
+              <GatsbyImage
+                image={getImage(node.frontmatter.src)}
+                alt={node.frontmatter.alt}
+                className="position-unset"
+              />
               {node.frontmatter.employer && (
                 <span className="employer">
                   {node.frontmatter.employer}

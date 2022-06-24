@@ -43,12 +43,10 @@ const Projects = React.forwardRef((props, ref) => {
           return (
             <div key={i} className="panel-border panel">
               <a href={node.frontmatter.url}>
-                <figure>
-                  <GatsbyImage
-                    image={getImage(node.frontmatter.src)}
-                    alt={node.frontmatter.alt}
-                  />
-                </figure>
+                <GatsbyImage
+                  image={getImage(node.frontmatter.src)}
+                  alt={node.frontmatter.alt}
+                />
               </a>
 
               {node.frontmatter.title && (

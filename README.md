@@ -13,10 +13,11 @@
 <div align="center">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c1dee440-f4fa-47e8-a3a1-ef2154ff3177/deploy-status)](https://app.netlify.com/sites/hamzamemon/deploys)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhamzamemon%2Fhamzamemon.com&count_bg=%23FFA0C5&title_bg=%23555555&icon=gatsby.svg&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 </div>
 
-![demo](https://raw.githubusercontent.com/hamzamemon/hamzamemon.com/main/static/about-me.png)
+![Demo](https://raw.githubusercontent.com/hamzamemon/hamzamemon.com/main/static/demo.png)
 
 ## 🛠️ Installation
 
@@ -59,9 +60,9 @@
 | --------- | --------------------------------------------------- |
 | ActionMan | [ActionMan](https://www.dafont.com/action-man.font) |
 
-| Color  | Hex                                                                |
-| ------ | ------------------------------------------------------------------ |
-| Black  | ![#000000](https://via.placeholder.com/10/000000?text=+) `#000000` |
-| Pink   | ![#ffa0c5](https://via.placeholder.com/10/ffa0c5?text=+) `#ffa0c5` |
-| White  | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff` |
-| Yellow | ![#ffff00](https://via.placeholder.com/10/ffff00?text=+) `#ffff00` |
+| Color  | Hex                                                                    |
+| ------ | ---------------------------------------------------------------------- |
+| Black  | ![#000000](https://via.placeholder.com/10/000000/000000.png) `#000000` |
+| Pink   | ![#ffa0c5](https://via.placeholder.com/10/ffa0c5/ffa0c5.png) `#ffa0c5` |
+| White  | ![#ffffff](https://via.placeholder.com/10/ffffff/ffffff.png) `#ffffff` |
+| Yellow | ![#ffff00](https://via.placeholder.com/10/ffff00/ffff00.png) `#ffff00` |

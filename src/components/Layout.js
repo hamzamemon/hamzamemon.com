@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Head } from '@components';
+import PropTypes from 'prop-types';
+import { SEO } from '@components';
 import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from '@styles';
 
@@ -22,15 +23,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Head />
+      <SEO />
 
       <ThemeProvider theme={theme}>
         <GlobalStyle />
 
         <SiteContainer>
-          <SiteContent>
+          <div className="site-content">
             <div>{children}</div>
-          </SiteContent>
+          </div>
         </SiteContainer>
       </ThemeProvider>
     </>
@@ -40,29 +41,33 @@ const Layout = ({ children }) => {
 const SiteContainer = styled.div`
   width: 100vw;
   max-width: 100vw;
+
+  .site-content {
+    width: 100%;
+    padding: 1.5rem 3rem 0;
+    margin: 0 auto;
+
+    @media (${({ theme }) => theme.breakpoints.mobileL}) {
+      padding: 2rem 3rem 0;
+    }
+
+    @media (${({ theme }) => theme.breakpoints.tablet}) {
+      padding: 4rem 4rem 0;
+    }
+
+    @media (${({ theme }) => theme.breakpoints.laptop}) {
+      padding: 2rem 2rem 0;
+      max-width: 1250px;
+    }
+
+    @media (${({ theme }) => theme.breakpoints.laptopL}) {
+      padding: 3rem 1rem 0;
+    }
+  }
 `;
 
-const SiteContent = styled.div`
-  width: 100%;
-  padding: 1.5rem 3rem 0;
-  margin: 0 auto;
-
-  @media (${({ theme }) => theme.breakpoints.mobileL}) {
-    padding: 2rem 3rem 0;
-  }
-
-  @media (${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 4rem 4rem 0;
-  }
-
-  @media (${({ theme }) => theme.breakpoints.laptop}) {
-    padding: 2rem 2rem 0;
-    max-width: 1250px;
-  }
-
-  @media (${({ theme }) => theme.breakpoints.laptopL}) {
-    padding: 3rem 1rem 0;
-  }
-`;
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Layout;
