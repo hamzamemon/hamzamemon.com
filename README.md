@@ -1,68 +1,54 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/hamzamemon/hamzamemon.com/main/src/images/logo.png" alt="Logo" width="100" />
-</div>
-
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
 <h1 align="center">
-  hamzamemon.com
+  Gatsby minimal TypeScript starter
 </h1>
 
-<p align="center">
-  Built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted on <a href="https://www.netlify.com/" target="_blank">Netlify</a>
-</p>
+## 🚀 Quick start
 
-<div align="center">
+1.  **Create a Gatsby site.**
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c1dee440-f4fa-47e8-a3a1-ef2154ff3177/deploy-status)](https://app.netlify.com/sites/hamzamemon/deploys)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhamzamemon%2Fhamzamemon.com&count_bg=%23FFA0C5&title_bg=%23555555&icon=gatsby.svg&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
+    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
 
-</div>
+    ```shell
+    # create a new Gatsby site using the minimal TypeScript starter
+    npm init gatsby
+    ```
 
-![Demo](https://raw.githubusercontent.com/hamzamemon/hamzamemon.com/main/static/demo.png)
+2.  **Start developing.**
 
-## 🛠️ Installation
+    Navigate into your new site’s directory and start it up.
 
-1. Install the Gatsby CLI if not already installed
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-   ```sh
-   npm install -g gatsby-cli
-   ```
+3.  **Open the code and start customizing!**
 
-2. Clone the project
+    Your site is now running at http://localhost:8000!
 
-   ```sh
-   git clone https://github.com/hamzamemon/hamzamemon.com.git
-   cd hamzamemon.com
-   ```
+    Edit `src/pages/index.tsx` to see your site update in real-time!
 
-3. Install dependencies
+4.  **Learn more**
 
-   ```sh
-   npm install
-   ```
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-## 🚀 Building and Running for Production
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-1. Generate a production build
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-   ```sh
-   npm run build
-   ```
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-1. View the site as it would look once deployed to production
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-   ```sh
-   npm run serve
-   ```
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-## 🖌️ Fonts and Colors
+## 🚀 Quick start (Gatsby Cloud)
 
-| Font      | Link                                                |
-| --------- | --------------------------------------------------- |
-| ActionMan | [ActionMan](https://www.dafont.com/action-man.font) |
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-| Color  | Hex                                                                    |
-| ------ | ---------------------------------------------------------------------- |
-| Black  | ![#000000](https://via.placeholder.com/10/000000/000000.png) `#000000` |
-| Pink   | ![#ffa0c5](https://via.placeholder.com/10/ffa0c5/ffa0c5.png) `#ffa0c5` |
-| White  | ![#ffffff](https://via.placeholder.com/10/ffffff/ffffff.png) `#ffffff` |
-| Yellow | ![#ffff00](https://via.placeholder.com/10/ffff00/ffff00.png) `#ffff00` |
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
