@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://hamzamemon.com/sitemap.xml
