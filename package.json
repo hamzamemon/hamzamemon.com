@@ -1,68 +1,23 @@
 {
-  "name": "hamzamemon.com",
-  "version": "1.0.0",
-  "description": "Personal website for Hamza Memon",
-  "author": {
-    "name": "Hamza Memon",
-    "email": "hmemon67@gmail.com",
-    "url": "http://hamzamemon.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hamzamemon/hamzamemon.com"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "homepage": "https://github.com/hamzamemon/hamzamemon.com#readme",
-  "bugs": {
-    "url": "https://github.com/hamzamemon/hamzamemon.com/issues",
-    "email": "hmemon67@gmail.com"
-  },
-  "license": "MIT",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^2.0.2",
-    "bootstrap": "^5.1.1",
-    "gatsby": "^4.15.1",
-    "gatsby-plugin-google-gtag": "^4.15.0",
-    "gatsby-plugin-image": "^2.15.0",
-    "gatsby-plugin-manifest": "^4.15.0",
-    "gatsby-plugin-offline": "^5.15.0",
-    "gatsby-plugin-react-helmet": "^5.15.0",
-    "gatsby-plugin-react-svg": "^3.1.0",
-    "gatsby-plugin-sass": "^5.15.0",
-    "gatsby-plugin-sharp": "^4.15.1",
-    "gatsby-plugin-styled-components": "^5.15.0",
-    "gatsby-remark-external-links": "0.0.4",
-    "gatsby-remark-images": "^6.15.1",
-    "gatsby-source-filesystem": "^4.15.0",
-    "gatsby-transformer-remark": "^5.15.1",
-    "gatsby-transformer-sharp": "^4.15.1",
-    "prop-types": "^15.7.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-slick": "^0.29.0",
-    "sass": "^1.53.0",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.18.5",
-    "@babel/eslint-parser": "^7.13.14",
-    "@babel/preset-react": "^7.13.13",
-    "babel-preset-gatsby": "^2.15.0",
-    "eslint": "^8.17.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.30.1",
-    "prettier": "^2.7.0"
+    "@next/font": "13.1.6",
+    "@types/node": "18.13.0",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
   }
 }
